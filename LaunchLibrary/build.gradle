@@ -75,8 +75,8 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = 'com.github.FitzJor'
-            artifactId = 'LaunchLibrary-release'
-            version = "1.0.1"
+            artifactId = 'UniversalLaunchLibrary'
+            version = "1.0.2"
             pom {
                 description = 'First release'
             }
