@@ -97,8 +97,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.FitzJor'
-                artifactId = 'UniversalLaunchLibrary'
-                version = "1.0.5"
+                artifactId = 'LaunchLibrary'
+                version = "1.0.6"
                 pom {
                     description = 'First release'
                 }
