@@ -71,18 +71,41 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.github.FitzJor'
-            artifactId = 'UniversalLaunchLibrary'
-            version = "1.0.4"
-            pom {
-                description = 'First release'
+//afterEvaluate{
+//    publishing {
+//        publications {
+//            release maven(MavenPublication) {
+//                from components.release
+//                groupId = 'com.github.FitzJor'
+//                artifactId = 'UniversalLaunchLibrary'
+//                version = "1.0.4"
+//                pom {
+//                    description = 'First release'
+//                }
+//
+//            }
+//        }
+//        repositories {
+//            mavenLocal()
+//        }
+//    }
+//}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.FitzJor'
+                artifactId = 'UniversalLaunchLibrary'
+                version = "1.0.5"
+                pom {
+                    description = 'First release'
+                }
             }
         }
-    }
-    repositories {
-        mavenLocal()
+        repositories {
+            mavenLocal()
+        }
     }
 }
